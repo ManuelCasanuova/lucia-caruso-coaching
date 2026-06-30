@@ -617,7 +617,7 @@ footer{background:#080f1e;padding:60px 40px 30px;}
       <h2 class="sh" id="bio-h2">Una guida per il<br>tuo <em>cambiamento</em></h2>
       <blockquote class="bio-quote" id="bio-quote">"Ogni persona ha già dentro di sé le risorse per costruire la vita che desidera. Il mio ruolo è creare lo spazio e le domande giuste per farle emergere."</blockquote>
       <p class="bio-para" id="bio-p1">Sono Lucia Caruso, coach professionista riconosciuta ICF. Da oltre dieci anni accompagno persone e organizzazioni nel processo di cambiamento, con un approccio centrato sulla persona, sulla consapevolezza e sull'azione concreta.</p>
-      <p class="bio-para" id="bio-p2">Il mio percorso nasce da una formazione in psicologia e si è arricchito attraverso la certificazione ICF e la pratica con centinaia di coachee in contesti personali e aziendali.</p>
+      <p class="bio-para" id="bio-p2"> </p>
       <div class="bio-skills" id="bio-skills"></div>
     </div>
   </div>
@@ -642,7 +642,7 @@ footer{background:#080f1e;padding:60px 40px 30px;}
       </div>
       <div class="ft-col">
         <h4 id="ft-social-h">Social</h4>
-        <a href="#">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/luciacaruso-/">LinkedIn</a>
         <a href="#">Instagram</a>
       </div>
     </div>
@@ -1886,8 +1886,8 @@ function buildBioTab() {
     '<div class="af"><label>Badge certificazione</label><input type="text" id="b-badge" value="' + escHtml(bio.badge||"ICF Professional Coach") + '"></div>' +
     '<div class="af"><label>Citazione / quote</label><textarea id="b-quote" rows="3">' + escHtml(bio.quote||"Ogni persona ha già dentro di sé le risorse per costruire la vita che desidera.") + '</textarea></div>' +
     '<div class="af"><label>Paragrafo 1</label><textarea id="b-p1" rows="4">' + escHtml(bio.p1||"Sono Lucia Caruso, coach professionista riconosciuta ICF.") + '</textarea></div>' +
-    '<div class="af"><label>Paragrafo 2</label><textarea id="b-p2" rows="4">' + escHtml(bio.p2||"Il mio percorso nasce da una formazione in psicologia.") + '</textarea></div>' +
-    '<div class="af"><label>Competenze (separate da virgola)</label><input type="text" id="b-skills" value="' + escHtml(bio.skills||"Life Coaching,Executive Coaching,Team Coaching,ICF Certified,Psicologia applicata") + '"></div>' +
+    '<div class="af"><label>Paragrafo 2</label><textarea id="b-p2" rows="4">' + escHtml(bio.p2||"") + '</textarea></div>' +
+    '<div class="af"><label>Competenze (separate da virgola)</label><input type="text" id="b-skills" value="' + escHtml(bio.skills||"Life Coaching,Executive Coaching,Team Coaching,ICF Certified") + '"></div>' +
     '</div><button class="asave" onclick="saveBio()">Salva bio</button>';
 }
 function saveBio() {
