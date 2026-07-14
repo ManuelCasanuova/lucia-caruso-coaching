@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>Cookie Policy — Lucia Caruso Coaching</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#f4f6fb;color:#1a2540;line-height:1.8;}
+header{background:#0a1f44;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;}
+header a{color:#f0a0c8;font-size:13px;text-decoration:none;font-family:Arial,sans-serif;}
+header .logo{color:#fff;font-size:18px;font-weight:300;}
+.container{max-width:800px;margin:0 auto;padding:48px 24px 80px;}
+h1{font-size:clamp(26px,5vw,40px);font-weight:300;margin-bottom:6px;color:#0a1f44;}
+.updated{font-size:11px;color:#9a9ab0;margin-bottom:36px;font-family:Arial,sans-serif;}
+.titolare-box{background:#fff;border:1px solid #e4eaf6;border-radius:12px;padding:18px 22px;margin-bottom:28px;}
+.titolare-box p{margin-bottom:5px;font-size:14px;}
+h2{font-size:17px;font-weight:600;color:#0a1f44;margin:32px 0 10px;padding-bottom:5px;border-bottom:1px solid #e4eaf6;}
+.disclaimer-box{background:#fff4f0;border-left:4px solid #C8206E;border-radius:0 10px 10px 0;padding:16px 20px;margin:20px 0 28px;font-size:14px;line-height:1.7;}
+p{margin-bottom:10px;font-size:15px;}
+a{color:#C8206E;}
+.btn{background:#C8206E;color:#fff;border:none;padding:10px 22px;border-radius:999px;font-size:13px;cursor:pointer;font-family:inherit;margin-top:8px;}
+footer{text-align:center;padding:22px;font-size:11px;color:#9a9ab0;font-family:Arial,sans-serif;border-top:1px solid #e4eaf6;margin-top:40px;}
+footer a{color:#C8206E;}
+</style>
+</head>
+<body>
+<header>
+  <span class="logo">Lucia Caruso Coaching</span>
+  <a href="index.html">← Torna al sito</a>
+</header>
+<div class="container" id="page-content">
+  <p style="color:#b0b0c8;text-align:center;padding:40px 0;">Caricamento…</p>
+</div>
+<footer>
+  <p><a href="index.html">Home</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="cookie.html">Cookie Policy</a> &middot; <a href="termini.html">Termini e Condizioni</a></p>
+  <p style="margin-top:6px;">&copy; 2026 Lucia Caruso &mdash; P.IVA <span id="piva-f">—</span> &mdash; Castel di Sangro &mdash; Legge 4/2013</p>
+</footer>
+<script>
+var SB_URL="https://uotrpwkfozabfmdjxver.supabase.co",SB_ANON="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVvdHJwd2tmb3phYmZtZGp4dmVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MjAxNjMsImV4cCI6MjA5ODM5NjE2M30.OliAdgL6ZaiIMKGWzoGTW7zgPvWfAPnkcb0G2PCElD0",PAGE_ID="cookie";
+function lc(k){try{return JSON.parse(localStorage.getItem("lc_"+k));}catch(e){return null;}}
+var DEFS={
+  privacy:{title:"Privacy Policy",updated:"14 luglio 2026",
+    intro:"Informativa ai sensi dell'art. 13 GDPR \u2014 Regolamento UE 2016/679.",
+    s1_title:"Dati raccolti e finalit\u00e0",
+    s1_body:"Prenotazioni: nome, cognome, email, telefono \u2014 base giuridica art.6.1.b GDPR (contratto).\nNewsletter: email criptata AES-256 \u2014 base giuridica art.6.1.a GDPR (consenso).\nCookie tecnici: preferenze sito, validi 180 giorni.",
+    s2_title:"Responsabili esterni",
+    s2_body:"Supabase Inc. (database, Frankfurt UE) \u2014 art.28 GDPR.\nEmailJS (invio email transazionali).\nGitHub Inc. (hosting sito statico).",
+    s3_title:"Conservazione",
+    s3_body:"Dati prenotazioni: durata rapporto professionale e obblighi fiscali (max 10 anni).\nDati newsletter: fino a revoca del consenso, poi cancellazione entro 30 giorni.",
+    s4_title:"Diritti dell'interessato (art. 15-22 GDPR)",
+    s4_body:"Accesso, rettifica, cancellazione, limitazione, portabilit\u00e0, opposizione, revoca del consenso.\nReclamo al Garante: garanteprivacy.it"
+  },
+  cookie:{title:"Cookie Policy",updated:"14 luglio 2026",
+    intro:"Il sito utilizza esclusivamente cookie tecnici. Nessun cookie di profilazione, analytics o marketing.",
+    s1_title:"Cookie utilizzati",
+    s1_body:"lc_* (localStorage) \u2014 Preferenze sito: lingua, impostazioni. Non trasmessi a server.\ncookie_consent (localStorage) \u2014 Preferenza banner cookie. Valido 180 giorni.",
+    s2_title:"Cookie di terze parti",
+    s2_body:"Il sito non carica script di terze parti che installano cookie autonomamente.",
+    s3_title:"Gestione preferenze",
+    s3_body:"Puoi revocare il consenso in qualsiasi momento tramite il link 'Gestisci cookie' nel footer."
+  },
+  termini:{title:"Termini e Condizioni del Servizio",updated:"14 luglio 2026",
+    intro:"I presenti Termini regolano il rapporto tra il Coach e il Cliente per i servizi di coaching.",
+    disclaimer:"Il coaching non \u00e8 psicoterapia. Non costituisce attivit\u00e0 terapeutica, psicologica, medica o di consulenza professionale regolamentata. Il Coach non diagnostica n\u00e9 tratta disturbi psicologici o condizioni mediche.",
+    s1_title:"Prenotazione e conferma",s1_body:"La prenotazione \u00e8 soggetta a conferma entro 24-48 ore lavorative.",
+    s2_title:"Cancellazione",s2_body:"Pi\u00f9 di 48h di preavviso: rimborso o riprogrammazione gratuita.\nMeno di 48h: sessione non rimborsabile salvo forza maggiore.\nNo-show: sessione da considerarsi erogata.",
+    s3_title:"Diritto di recesso",s3_body:"Il consumatore pu\u00f2 recedere entro 14 giorni dalla stipula (art.52 D.Lgs.206/2005). Non si applica alle sessioni gi\u00e0 erogate con consenso esplicito.",
+    s4_title:"Riservatezza",s4_body:"Il Coach \u00e8 vincolato alla massima riservatezza in conformit\u00e0 al Codice Etico ICF. Il Cliente non pu\u00f2 registrare le sessioni senza consenso scritto.",
+    s5_title:"Legge applicabile",s5_body:"Legge italiana. Per controversie con consumatori: foro del luogo di residenza del consumatore."
+  }
+};
+function esc(s){return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function renderPage(d,contatti){
+  d=d||DEFS[PAGE_ID]||{};
+  var email=(contatti&&contatti.email)||"\u2014";
+  var piva=(contatti&&contatti.piva)||"\u2014";
+  var pf=document.getElementById("piva-f");if(pf)pf.textContent=piva;
+  var h="<h1>"+esc(d.title||"")+"</h1>";
+  h+='<p class="updated">Ultimo aggiornamento: '+esc(d.updated||"")+'</p>';
+  if(PAGE_ID!=="cookie"){
+    h+='<div class="titolare-box">';
+    h+="<p><strong>Titolare del trattamento</strong></p>";
+    h+="<p>Lucia Caruso &mdash; Life &amp; Executive Coach ICF</p>";
+    h+="<p>Castel di Sangro (AQ)</p>";
+    h+="<p>P.IVA: "+piva+"</p>";
+    h+='<p>Email: <a href="mailto:'+email+'">'+ email+"</a></p>";
+    h+="</div>";
+  }
+  if(d.intro)h+="<p>"+esc(d.intro)+"</p>";
+  if(d.disclaimer)h+='<div class="disclaimer-box"><strong>&#9888;&#65039; '+esc(d.disclaimer)+"</strong></div>";
+  for(var i=1;i<=9;i++){
+    var tk="s"+i+"_title",bk="s"+i+"_body";
+    if(d[tk]){h+="<h2>"+esc(d[tk])+"</h2>";if(d[bk])h+="<p>"+esc(d[bk]).replace(/\n/g,"<br>")+"</p>";}
+  }
+  if(PAGE_ID==="cookie"){h+='<h2>Reimposta preferenze</h2><button class="btn" onclick="localStorage.removeItem(\'cookie_consent\');alert(\'Preferenza rimossa\');location.reload()">Gestisci preferenze cookie</button>';}
+  if(PAGE_ID==="privacy"){h+='<h2>Reclami</h2><p>Hai il diritto di presentare reclamo al <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener">Garante per la protezione dei dati personali</a> &mdash; Piazza Venezia 11, 00187 Roma.</p>';}
+  if(PAGE_ID==="termini"){h+='<h2>Controversie online</h2><p><a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">Piattaforma ODR europea</a>.</p>';}
+  document.getElementById("page-content").innerHTML=h;
+}
+function load(){
+  var cached=lc("legal_"+PAGE_ID),contatti=lc("contatti")||{};
+  renderPage(cached||DEFS[PAGE_ID],contatti);
+  fetch(SB_URL+"/rest/v1/site_config?id=eq.main&select=data",{headers:{"apikey":SB_ANON,"Authorization":"Bearer "+SB_ANON}})
+  .then(function(r){return r.json();})
+  .then(function(rows){
+    var row=rows&&rows[0];if(!row||!row.data)return;
+    var d=row.data;
+    Object.keys(d).forEach(function(k){localStorage.setItem("lc_"+k,JSON.stringify(d[k]));});
+    renderPage(d["legal_"+PAGE_ID]||DEFS[PAGE_ID],d["contatti"]||contatti);
+  }).catch(function(){});
+}
+load();
+</script>
+</body>
+</html>
