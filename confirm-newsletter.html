@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Conferma iscrizione — Lucia Caruso Coaching</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Cormorant Garamond',Georgia,serif;background:#f4f6fb;color:#1a2540;display:flex;flex-direction:column;min-height:100vh;}
+header{background:#0a1f44;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;}
+header a{color:#f0a0c8;font-size:13px;text-decoration:none;font-family:Arial,sans-serif;}
+header .logo{color:#fff;font-size:18px;font-weight:300;}
+.container{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;}
+.card{background:#fff;border-radius:20px;padding:48px 40px;max-width:480px;width:100%;text-align:center;border:1px solid #e4eaf6;}
+.icon{font-size:56px;margin-bottom:20px;}
+h1{font-size:28px;font-weight:300;color:#0a1f44;margin-bottom:12px;}
+p{font-size:15px;color:#7a7a9a;line-height:1.7;margin-bottom:20px;}
+.btn{display:inline-block;background:#C8206E;color:#fff;padding:12px 28px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;font-family:Arial,sans-serif;}
+.loading{color:#b0b0c8;}
+</style>
+</head>
+<body>
+<header>
+  <span class="logo">Lucia Caruso Coaching</span>
+  <a href="index.html">← Torna al sito</a>
+</header>
+<div class="container">
+  <div class="card" id="card">
+    <div class="icon">⏳</div>
+    <h1>Conferma in corso...</h1>
+    <p class="loading">Stiamo verificando il tuo token.</p>
+  </div>
+</div>
+<script>
+var SB_URL = "https://uotrpwkfozabfmdjxver.supabase.co";
+var SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVvdHJwd2tmb3phYmZtZGp4dmVyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI4MjAxNjMsImV4cCI6MjA5ODM5NjE2M30.OliAdgL6ZaiIMKGWzoGTW7zgPvWfAPnkcb0G2PCElD0";
+
+var token = new URLSearchParams(window.location.search).get("token");
+var card  = document.getElementById("card");
+
+function show(icon, title, msg, link) {
+  card.innerHTML = '<div class="icon">'+icon+'</div><h1>'+title+'</h1><p>'+msg+'</p>'+(link?'<a href="index.html" class="btn">'+link+'</a>':'');
+}
+
+if(!token) {
+  show("❌", "Token mancante", "Il link non è valido. Prova a iscriverti di nuovo.", "Vai al sito");
+} else {
+  fetch(SB_URL+"/functions/v1/confirm-newsletter?token="+encodeURIComponent(token), {
+    headers:{"apikey":SB_ANON}
+  }).then(function(r){return r.json();})
+  .then(function(data){
+    if(data.status==="confirmed") {
+      show("✅", "Iscrizione confermata!", "Grazie! Riceverai aggiornamenti su coaching, risorse e masterclass.", "Vai al sito");
+    } else if(data.status==="already_confirmed") {
+      show("✓", "Già confermata", "Il tuo indirizzo era già stato confermato in precedenza.", "Vai al sito");
+    } else if(data.error) {
+      show("⚠️", "Problema", data.error, "Vai al sito");
+    }
+  }).catch(function(e){
+    show("❌", "Errore", "Si è verificato un errore. Riprova o contattaci.", "Vai al sito");
+  });
+}
+</script>
+</body>
+</html>
