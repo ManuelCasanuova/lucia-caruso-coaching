@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /confirm-newsletter.html
+
+Sitemap: https://luciacarusocoaching.it/sitemap.xml
